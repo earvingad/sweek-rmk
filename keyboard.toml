@@ -20,6 +20,14 @@ matrix_map = """
 (2,0) (2,1) (2,2) (2,3) (2,4) (2,5) (2,6) (2,7) (2,8) (2,9)
             (3,2) (3,3) (3,4) (3,5) (3,6) (3,7) 
 """
+encoder_map = [
+  [["Up", "Down"], ["Left", "Right"]],
+  [["Left","Right"], ["WM(Tab, LSHift)","Tab"]],
+  [["_","_"], ["WM(ms_whld, LCtrl)","WM(ms_whlu, LCtrl)"]],
+  [["_", "_"], ["AudioVolUp", "AudioVolDoW"]],
+  [["_","_"], ["_","_"]],
+  [["_","_"], ["_","_"]]
+]
 # [[layers]]
 # name = "base"
 # keys = """
@@ -126,7 +134,7 @@ combos = [
   { actions = ["W", "F"], output = "Tab" },
   { actions = ["F", "P"], output = "CapsWordToggle"},
   { actions = ["O", "Y"], output = "Del" },
-  { actions = ["W", "F"], output = "LeftBracket" },
+  { actions = ["O", "L"], output = "LeftBracket" },
 ]
 
 [split]
@@ -142,6 +150,12 @@ serial = [{ instance = "UART0", tx_pin = "PIN_0", rx_pin = "PIN_1" }]
 row_pins = ["PIN_29", "PIN_28", "PIN_27", "PIN_26"]
 col_pins = ["PIN_3", "PIN_4", "PIN_5", "PIN_6", "PIN_7"]
 
+[[input_device.encoder]]
+pin_a = "PIN_10"
+pin_b = "PIN_9"
+phase = "default"
+
+
 [[split.peripheral]]
 rows = 4
 cols = 5
@@ -151,3 +165,8 @@ serial = [{ instance = "UART0", tx_pin = "PIN_0", rx_pin = "PIN_1" }]
 [split.peripheral.matrix]
 row_pins = ["PIN_3", "PIN_4", "PIN_5", "PIN_6"]
 col_pins = ["PIN_15", "PIN_26", "PIN_27", "PIN_28", "PIN_29"]
+
+[[input_device.encoder]]
+pin_a = "PIN_10"
+pin_b = "P0_)"
+phase = "default"
