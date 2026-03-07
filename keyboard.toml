@@ -65,9 +65,9 @@ SPC_ALT = "MT(spc, LAlt)"
 name = "base"
 keys = """
 Q     W     F     P     G                 J      L       O       Y       scln
-A     R_L1     S_L2     T_L3     D        H      N_L6       E_L4       I       U
-Z     X     C     V     B                 K      M       Comma   DOT_APP    slsh
-        LCtrl  SPC_ALT  ESC_L5            ENT_L5    BSPC_ALT   LShift
+A     @R_L1     @S_L2     @T_L3     D        H      @N_L6       @E_L4       I       U
+Z     X     C     V     B                 K      M       Comma   @DOT_APP    slsh
+        LCtrl  @SPC_ALT  @ESC_L5            @ENT_L5    @BSPC_ALT   LShift
 """
 
 [[layer]]
@@ -100,9 +100,9 @@ _ _ _                      _ _ _
 [[layer]]
 name = "symbols"
 keys = """
-EXLM AT HASH DLR PERC                          CIRC    AMPR     _     Grave  _
-Minus Equal LeftBracket Quote Backslash        ASTR    LPRN     _     RPRN   _
-PLUS UNDS RightBracket RCBR PIPE               nubs     _       _     _      _
+@EXLM @AT @HASH @DLR @PERC                          @CIRC    @AMPR     _     Grave  _
+Minus Equal LeftBracket Quote Backslash        @ASTR    @LPRN     _     @RPRN   _
+@PLUS @UNDS RightBracket @RCBR @PIPE               nubs     _       _     _      _
 _ _ _                      _ _ _
 """
 
@@ -111,7 +111,7 @@ name = "nav"
 keys = """
 caps Home pgup Del LSft          _     _     pgup  Home  _
 Left Down Up Right LGui          TG(1) bspc  _     _     _
-_ End pgdn RCBR PIPE             _     _    pgdn  End   _
+_ End pgdn _ _             _     _    pgdn  End   _
 _ _ _                    _ _ _
 """
 
