@@ -61,7 +61,7 @@ A     @R_L1     @S_L2     @T_L3     D        H      @N_L6       @E_L4       I   
 Z     X     C     V     B                 K      M       Comma   @DOT_APP    slsh
         LCtrl  @SPC_ALT  @ESC_L5            @ENT_L5    @BSPC_ALT   LShift
 """
-encoders = [["Up", "Down"], ["Left", "Right"]]
+encoders = [["Down", "Up"], ["Left", "Right"]]
 
 [[layer]]
 name = "mouse"
@@ -71,7 +71,7 @@ _ _  MouseBtn1   _  MouseBtn1        _     ms_left       ms_down       ms_up    
 _ _ _ _ _                            _     MouseBtn3     ms_whld _ _
 _ _ _                        _ _ _   
 """
-encoders = [["Left","Right"], ["WM(Tab, LSHift)","Tab"]]
+encoders = [["Left","Right"], ["WM(Tab, LShift)","Tab"]]
 
 [[layer]]
 name = "number"
@@ -145,7 +145,7 @@ pin_a = "PIN_10"
 pin_b = "PIN_9"
 internal_pullup = true
 phase = "resolution"
-resolution = 2
+resolution = 1
 
 [[split.peripheral]]
 rows = 4
@@ -163,4 +163,4 @@ pin_a = "PIN_10"
 pin_b = "PIN_9"
 internal_pullup = true
 phase = "resolution"
-resolution = 2
+resolution = 1
