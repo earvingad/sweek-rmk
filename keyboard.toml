@@ -14,13 +14,13 @@ chip = "rp2040"
 rows = 4
 cols = 10
 layers = 6
-# matrix_map = """
-# (0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6) (0,7) (0,8) (0,9)
-# (1,0) (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (1,8) (1,9)
-# (2,0) (2,1) (2,2) (2,3) (2,4) (2,5) (2,6) (2,7) (2,8) (2,9)
-# (3,0) (3,1) (3,2) (3,3) (3,4) (3,5) (3,6) (3,7) (3,8) (3,9)
-#                   (4,3) (4,4) (4,5) (4,6)
-# """
+matrix_map = """
+(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6) (0,7) (0,8) (0,9)
+(1,0) (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (1,8) (1,9)
+(2,0) (2,1) (2,2) (2,3) (2,4) (2,5) (2,6) (2,7) (2,8) (2,9)
+(3,0) (3,1) (3,2) (3,3) (3,4) (3,5) (3,6) (3,7) (3,8) (3,9)
+            (4,2) (4,3) (4,4) (4,5) (4,6) (4,7)
+"""
 # [[layers]]
 # name = "base"
 # keys = """
@@ -68,7 +68,7 @@ keys = """
 Q     W     F     P     G                 J      L       O       Y       scln
 A     R_L1     S_L2     T_L3     D        H      N_L6       E_L4       I       U
 Z     X     C     V     B                 K      M       ,   DOT_APP    slsh
-No  No  LCtrl  SPC_ALT  ESC_L5            ENT_L5    BSPC_ALT   LShift    No    No
+        LCtrl  SPC_ALT  ESC_L5            ENT_L5    BSPC_ALT   LShift
 """
 
 [[layer]]
@@ -77,7 +77,7 @@ keys = """
 _ _ _ _ _                            _     MouseBtn1     ms_whlu       MouseBtn2       _
 _ _  MouseBtn1   _  MouseBtn1        _     ms_left       ms_down       ms_up       ms_right
 _ _ _ _ _                            _     MouseBtn3     ms_whld _ _
-No  No  _ _ _                        _ _ _    No    No
+_ _ _                        _ _ _   
 """
 
 [[layer]]
@@ -86,7 +86,7 @@ keys = """
 _ Up _ _ _                            KpPlus     Kp7     Kp8     Kp9       KpAsterisk
 _ Left  _   Right _                   KpMinus    Kp4     Kp5     Kp6       KpDot
 _ Down _ , _                          Kp0        Kp1     Kp2     Kp3 KpSlash
-No  No  _ _ _                         _ _ _    No    No
+_ _ _                         _ _ _
 """
 
 [[layer]]
@@ -95,7 +95,7 @@ keys = """
 _ _ _ _ _                          _    F7     F8     F9   F10
 _ _ _ _ _                          _    F4     F5     F6   F11
 _ _ _ _ _                          _    F1     F2     F3   F12
-No  No  _ _ _                      _ _ _    No    No
+_ _ _                      _ _ _
 """
 
 [[layer]]
@@ -104,7 +104,7 @@ keys = """
 EXLM AT HASH DLR PERC                          CIRC    AMPR     _     Grave  _
 Minus Equal LeftBracket Quote Backslash        ASTR    LPRN     _     RPRN   _
 PLUS UNDS RightBracket RCBR PIPE               nubs     _       _     _      _
-No  No  _ _ _                      _ _ _    No    No
+_ _ _                      _ _ _
 """
 
 [[layer]]
@@ -113,7 +113,7 @@ keys = """
 caps Home pgup Del LSft          _     _     pgup  Home  _
 Left Down Up Right LGui          TG(1) bspc  _     _     _
 _ End pgdn RCBR PIPE             _     _    pgdn  End   _
-No  No  _ _ _                    _ _ _    No    No
+_ _ _                    _ _ _
 """
 
 
