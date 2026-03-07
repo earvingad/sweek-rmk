@@ -57,7 +57,7 @@ ENT_L5 = "LT(5, ent)"
 ESC_L5 = "LT(5, esc)"
 N_L6 = "LT(6, N)"
 
-DOT_APP = "MT(., Menu)"
+DOT_APP = "MT(Dot, Menu)"
 BASPC_ALT = "MT(bspc, RAlt)"
 SPC_ALT = "MT(spc, LAlt)"
 
@@ -66,7 +66,7 @@ name = "base"
 keys = """
 Q     W     F     P     G                 J      L       O       Y       scln
 A     R_L1     S_L2     T_L3     D        H      N_L6       E_L4       I       U
-Z     X     C     V     B                 K      M       ,   DOT_APP    slsh
+Z     X     C     V     B                 K      M       Comma   DOT_APP    slsh
         LCtrl  SPC_ALT  ESC_L5            ENT_L5    BSPC_ALT   LShift
 """
 
