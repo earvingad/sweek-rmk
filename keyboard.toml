@@ -3,7 +3,7 @@
 # Mouse key interval (ms) - controls mouse movement speed
 mouse_key_interval = 10
 # Default debounce time in ms
-debounce_time = 10
+debounce_time = 5uu
 
 [keyboard]
 name = "Sweek"
@@ -120,7 +120,7 @@ _ _ _                    _ _ _
 encoders = [["_","_"], ["_","_"]]
 
 [behavior]
-# tap_hold = { enable_hrm = true }
+tap_hold = { enable_hrm = true }
 
 [behavior.combo]
 timeout = "150ms"
