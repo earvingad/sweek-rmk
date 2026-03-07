@@ -153,7 +153,7 @@ internal_pullup = true
 phase = "resolution"
 resolution = 2
 
-[[split.peripheral]]
+[[split.peripheral]] #Right
 rows = 4
 cols = 5
 row_offset = 0
