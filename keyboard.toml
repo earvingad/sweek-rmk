@@ -58,7 +58,7 @@ ESC_L5 = "LT(5, esc)"
 N_L6 = "LT(6, N)"
 
 DOT_APP = "MT(Dot, Menu)"
-BASPC_ALT = "MT(bspc, RAlt)"
+BSPC_ALT = "MT(bspc, RAlt)"
 SPC_ALT = "MT(spc, LAlt)"
 
 [[layer]]
@@ -118,6 +118,16 @@ _ _ _                    _ _ _
 
 [behavior]
 # tap_hold = { enable_hrm = true }
+
+[behavior.combo]
+timeout = "150ms"
+combos = [
+  # Press J and K keys simultaneously to output Escape key
+  { actions = ["W", "F"], output = "Tab" },
+  { actions = ["F", "P"], output = "CapsWordToggle"},
+  { actions = ["O", "Y"], output = "Del" },
+  { actions = ["W", "F"], output = "LeftBracket" },
+]
 
 [split]
 connection = "serial"
