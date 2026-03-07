@@ -1,4 +1,174 @@
 # Documentation: https://rmk.rs/docs/configuration.html
+[rmk]
+# Mouse key interval (ms) - controls mouse movement speed
+mouse_key_interval = 10
+# Default debounce time in ms
+debounce_time = 5
+
+[keyboard]
+name = "Sweek"
+product_name = "Sweek Keyboard"
+vendor_id = 0x4c4b
+product_id = 0x4643
+manufacturer = "RMK"
+chip = "rp2040"
+
+[layout]
+# WARNING: Currently row2col/col2row is set in RMK's feature gate, configs here do nothing actually
+# row2col = true
+# col2row = true
+rows = 4
+cols = 10
+layers = 6
+matrix_map = """
+(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6) (0,7) (0,8) (0,9)
+(1,0) (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (1,8) (1,9)
+(2,0) (2,1) (2,2) (2,3) (2,4) (2,5) (2,6) (2,7) (2,8) (2,9)
+            (3,2) (3,3) (3,4) (3,5) (3,6) (3,7) 
+"""
+
+[aliases]
+EXLM = "WM(Kc1, LShift)"
+AT = "WM(Kc2, LShift)"
+HASH = "WM(Kc3, LShift)"
+DLR = "WM(Kc4, LShift)"
+PERC = "WM(Kc5, LShift)"
+CIRC = "WM(Kc6, LShift)"
+AMPR = "WM(Kc7, LShift)"
+ASTR = "WM(Kc8, LShift)"
+LPRN = "WM(Kc9, LShift)"
+RPRN = "WM(Kc0, LShift)"
+UNDS = "WM(Minus, LShift)"
+PLUS = "WM(Equal, LShift)"
+LCBR = "WM(LeftBracket, LShift)"
+RCBR = "WM(RightBracket, LShift)"
+COLN = "WM(Semicolon, LShift)"
+DQUO = "WM(Quote, LShift)"
+PIPE = "WM(Backslash, LShift)"
+TILD = "WM(Grave, LShift)"
+
+R_L1 = "LT(1, R)"
+S_L2 = "LT(2, S)"
+T_L3 = "LT(3, T)"
+E_L4 = "LT(4, E)"
+ENT_L5 = "LT(5, ent)"
+ESC_L5 = "LT(5, esc)"
+N_L6 = "LT(6, N)"
+
+DOT_APP = "TH(Dot, Menu)"
+BSPC_ALT = "MT(bspc, RAlt)"
+SPC_ALT = "MT(spc, LAlt)"
+
+[[layer]]
+name = "base"
+keys = """
+Q     W     F     P     G                 J      L       O       Y       scln
+A     @R_L1     @S_L2     @T_L3     D        H      @N_L6       @E_L4       I       U
+Z     X     C     V     B                 K      M       Comma   @DOT_APP    slsh
+        LCtrl  @SPC_ALT  @ESC_L5            @ENT_L5    @BSPC_ALT   LShift
+"""
+encoders = [["Down", "Up"], ["Left", "Right"]]
+
+[[layer]]
+name = "mouse"
+keys = """
+_ _ _ _ _                            _     MouseBtn1     ms_whlu       MouseBtn2       _
+_ _  MouseBtn1   _  MouseBtn1        _     ms_left       ms_down       ms_up       ms_right
+_ _ _ _ _                            _     MouseBtn3     ms_whld _ _
+_ _ _                        _ _ _   
+"""
+encoders = [["Left","Right"], ["WM(Tab, LShift)","Tab"]]
+
+[[layer]]
+name = "number"
+keys = """
+_ Up _ _ _                            KpPlus     Kp7     Kp8     Kp9       KpAsterisk
+_ Left  _   Right _                   KpMinus    Kp4     Kp5     Kp6       KpDot
+_ Down _ Comma _                          Kp0        Kp1     Kp2     Kp3 KpSlash
+_ _ _                         _ _ _
+"""
+encoders = [["_","_"], ["WM(ms_whld, LCtrl)","WM(ms_whlu, LCtrl)"]]
+
+[[layer]]
+name = "function"
+keys = """
+_ _ _ _ _                          _    F7     F8     F9   F10
+_ _ _ _ _                          _    F4     F5     F6   F11
+_ _ _ _ _                          _    F1     F2     F3   F12
+_ _ _                      _ _ _
+"""
+encoders = [["_", "_"], ["AudioVolDown", "AudioVolUp"]]
+
+[[layer]]
+name = "symbols"
+keys = """
+@EXLM @AT @HASH @DLR @PERC                          @CIRC    @AMPR     _     Grave  _
+Minus Equal LeftBracket Quote Backslash        @ASTR    @LPRN     _     @RPRN   _
+@PLUS @UNDS RightBracket @RCBR @PIPE               nubs     _       _     _      _
+_ _ _                      _ _ _
+"""
+encoders = [["_","_"], ["_","_"]]
+
+[[layer]]
+name = "nav"
+keys = """
+caps Home pgup Del LSft          _     _     pgup  Home  _
+Left Down Up Right LGui          TG(1) bspc  _     _     _
+_ End pgdn _ _             _     _    pgdn  End   _
+_ _ _                    _ _ _
+"""
+encoders = [["_","_"], ["_","_"]]
+
+[behavior]
+# tap_hold = { enable_hrm = true }
+
+[behavior.combo]
+timeout = "150ms"
+combos = [
+  # Press J and K keys simultaneously to output Escape key
+  { actions = ["W", "F"], output = "Tab" },
+  { actions = ["F", "P"], output = "CapsWordToggle"},
+  { actions = ["O", "Y"], output = "Del" },
+  { actions = ["O", "L"], output = "LeftBracket" },
+]
+
+
+[split]
+connection = "serial"
+
+[split.central] #Left
+rows = 4
+cols = 5
+row_offset = 0
+col_offset = 0
+serial = [{ instance = "UART0", tx_pin = "PIN_0", rx_pin = "PIN_1" }]
+[split.central.matrix]
+row_pins = ["PIN_29", "PIN_28", "PIN_27", "PIN_26"]
+col_pins = ["PIN_3", "PIN_4", "PIN_5", "PIN_6", "PIN_7"]
+
+[[split.central.input_device.encoder]]
+pin_a = "PIN_10"
+pin_b = "PIN_9"
+internal_pullup = true
+phase = "resolution"
+resolution = 2
+
+[[split.peripheral]]
+rows = 4
+cols = 5
+row_offset = 0
+col_offset = 5
+serial = [{ instance = "UART0", tx_pin = "PIN_0", rx_pin = "PIN_1" }]
+[split.peripheral.matrix]
+row_pins = ["PIN_3", "PIN_4", "PIN_5", "PIN_6"]
+col_pins = ["PIN_15", "PIN_26", "PIN_27", "PIN_28", "PIN_29"]
+
+[[split.peripheral.input_device.encoder]]
+pin_a = "PIN_9"
+pin_b = "PIN_10"
+internal_pullup = true
+phase = "resolution"
+resolution = 2# Documentation: https://rmk.rs/docs/configuration.html
 #[rmk]
 # Mouse key interval (ms) - controls mouse movement speed
 #mouse_key_interval = 10
