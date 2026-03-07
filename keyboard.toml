@@ -84,7 +84,7 @@ name = "number"
 keys = """
 _ Up _ _ _                            KpPlus     Kp7     Kp8     Kp9       KpAsterisk
 _ Left  _   Right _                   KpMinus    Kp4     Kp5     Kp6       KpDot
-_ Down _ , _                          Kp0        Kp1     Kp2     Kp3 KpSlash
+_ Down _ Comma _                          Kp0        Kp1     Kp2     Kp3 KpSlash
 _ _ _                         _ _ _
 """
 
