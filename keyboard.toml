@@ -1,9 +1,9 @@
 # Documentation: https://rmk.rs/docs/configuration.html
-[rmk]
+#[rmk]
 # Mouse key interval (ms) - controls mouse movement speed
-mouse_key_interval = 10
+#mouse_key_interval = 10
 # Default debounce time in ms
-debounce_time = 5
+#debounce_time = 5
 
 [keyboard]
 name = "Sweek"
