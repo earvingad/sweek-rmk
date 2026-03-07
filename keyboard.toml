@@ -140,7 +140,7 @@ col_offset = 0
 serial = [{ instance = "UART0", tx_pin = "PIN_0", rx_pin = "PIN_1" }]
 [split.central.matrix]
 row_pins = ["PIN_29", "PIN_28", "PIN_27", "PIN_26"]
-col_pins = ["PIN_3", "PING_4", "PIN_5", "PIN_6", "PIN_7"]
+col_pins = ["PIN_3", "PIN_4", "PIN_5", "PIN_6", "PIN_7"]
 
 [[split.peripheral]]
 rows = 4
@@ -149,5 +149,5 @@ row_offset = 0
 col_offset = 5
 serial = [{ instance = "UART0", tx_pin = "PIN_0", rx_pin = "PIN_1" }]
 [split.peripheral.matrix]
-row_pins = ["PIN_3", "PING_4", "PIN_5", "PIN_6"]
+row_pins = ["PIN_3", "PIN_4", "PIN_5", "PIN_6"]
 col_pins = ["PIN_29", "PIN_28", "PIN_27", "PIN_26", "PIN_15"]
