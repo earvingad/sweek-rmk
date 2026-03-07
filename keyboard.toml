@@ -56,8 +56,8 @@ ESC_L5 = "LT(5, esc)"
 N_L6 = "LT(6, N)"
 
 DOT_APP = "TH(Dot, Menu)"
-BSPC_ALT = "MT(bspc, RAlt)"
-SPC_ALT = "MT(spc, LAlt)"
+BSPC_ALT = "TH(bspc, RAlt)"
+SPC_ALT = "TH(spc, LAlt)"
 
 [[layer]]
 name = "base"
