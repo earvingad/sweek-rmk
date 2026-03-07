@@ -145,7 +145,7 @@ pin_a = "PIN_10"
 pin_b = "PIN_9"
 internal_pullup = true
 phase = "resolution"
-resolution = 4
+resolution = 2
 
 [[split.peripheral]]
 rows = 4
@@ -163,4 +163,4 @@ pin_a = "PIN_10"
 pin_b = "PIN_9"
 internal_pullup = true
 phase = "resolution"
-resolution = 4
+resolution = 2
