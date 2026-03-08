@@ -45,17 +45,17 @@ DQUO = "WM(Quote, LShift)"
 PIPE = "WM(Backslash, LShift)"
 TILD = "WM(Grave, LShift)"
 
-R_L1 = "LT(1, R)"
-S_L2 = "LT(2, S)"
-T_L3 = "LT(3, T)"
-E_L4 = "LT(4, E)"
-ENT_L5 = "LT(5, ent)"
-ESC_L5 = "LT(5, esc)"
-N_L6 = "LT(6, N)"
+R_L1 = "LT(1, R, FH)"
+S_L2 = "LT(2, S, FH)"
+T_L3 = "LT(3, T, FH)"
+E_L4 = "LT(4, E, FH)"
+ENT_L5 = "LT(5, ent, FH)"
+ESC_L5 = "LT(5, esc, FH)"
+N_L6 = "LT(6, N), FH"
 
-DOT_APP = "TH(Dot, Menu)"
-BSPC_ALT = "MT(bspc, RAlt)"
-SPC_ALT = "MT(spc, LAlt)"
+DOT_APP = "TH(Dot, Menu, FH)"
+BSPC_ALT = "MT(bspc, RAlt, FH)"
+SPC_ALT = "MT(spc, LAlt, FH)"
 
 [[layer]]
 name = "base"
@@ -130,6 +130,11 @@ combos = [
   { actions = ["O", "L"], output = "LeftBracket" },
 ]
 
+[behavior.morse.profiles]
+# This profile is recommended when the hold action activates a layer or acts as a modifier (without HRM) (for example thumb keys)
+FH = { hold_on_other_press = true, unilateral_tap = false, hold_timeout = "200ms", gap_timeout = "200ms" }
+
+
 
 [split]
 connection = "serial"
@@ -149,7 +154,8 @@ pin_a = "PIN_10"
 pin_b = "PIN_9"
 internal_pullup = true
 phase = "resolution"
-resolution = 4
+resolution = 2
+reverse = false
 
 [[split.peripheral]]
 rows = 4
@@ -166,4 +172,5 @@ pin_a = "PIN_9"
 pin_b = "PIN_10"
 internal_pullup = true
 phase = "resolution"
-resolution = 4
+resolution = 2
+reverse = false
