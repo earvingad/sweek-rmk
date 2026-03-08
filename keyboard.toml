@@ -51,7 +51,7 @@ T_L3 = "LT(3, T, FH)"
 E_L4 = "LT(4, E, FH)"
 ENT_L5 = "LT(5, ent, FH)"
 ESC_L5 = "LT(5, esc, FH)"
-N_L6 = "LT(6, N), FH"
+N_L6 = "LT(6, N, FH)"
 
 DOT_APP = "TH(Dot, Menu, FH)"
 BSPC_ALT = "MT(bspc, RAlt, FH)"
