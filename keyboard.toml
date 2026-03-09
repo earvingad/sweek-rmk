@@ -9,7 +9,9 @@ chip = "rp2040"
 
 [rmk]
 # Mouse key interval (ms) - controls mouse movement speed
-mouse_key_interval = 10
+mouse_key_interval = 5
+# Default debounce time in ms
+debounce_time = 2
 
 [layout]
 # WARNING: Currently row2col/col2row is set in RMK's feature gate, configs here do nothing actually
