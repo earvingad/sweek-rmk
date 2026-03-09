@@ -58,8 +58,8 @@ CTLALTD = "WM(Del, LCtrl | LAlt)"
 CTLSFTT = "WM(T, LCtrl | LShift)"
 LSFTDEL = "WM(Del, LShift)"
 
-NXT_WIN = "WM(Tab, LAlt)"
-PRV_WIN = "WM(Tab, LAlt | LShift)"
+NXT_WIN = "WM(Tab, OSM(LAlt))"
+PRV_WIN = "WM(Tab, OSM(LAlt | LShift))"
 
 R_L1 = "LT(1, R, FH)"
 S_L2 = "LT(2, S, FH)"
