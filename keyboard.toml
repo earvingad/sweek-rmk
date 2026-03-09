@@ -58,8 +58,8 @@ CTLALTD = "WM(Del, LCtrl | LAlt)"
 CTLSFTT = "WM(T, LCtrl | LShift)"
 LSFTDEL = "WM(Del, LShift)"
 
-NXT_WIN = "WM(Tab, OSM(LAlt))"
-PRV_WIN = "WM(Tab, OSM(LAlt) | OSM(LShift))"
+NXT_WIN = "WM(Tab, LAlt)"
+PRV_WIN = "WM(Tab, LAlt | LShift)"
 
 R_L1 = "LT(1, R, FH)"
 S_L2 = "LT(2, S, FH)"
@@ -101,7 +101,7 @@ _ Left  _  Right _                 KpMinus  Kc4  Kc5  Kc6  KpDot
 _ Down  _  Comma _                 Kc0      Kc1  Kc2  Kc3  KpSlash
         _ _ _                      _ _ _
 """
-encoders = [["_","_"], ["WM(ms_whld, RCtrl)","WM(ms_whlu, RCtrl)"]]
+encoders = [["_","_"], ["WM(ms_whld, LCtrl)","WM(ms_whlu, LCtrl)"]]
 
 [[layer]]
 name = "function"
@@ -109,26 +109,26 @@ keys = """
 _       @PRV_WIN @NXT_WIN _ _                        _    F7     F8     F9   F10
 @ALT_F4 @CTLSFTT @LSFTDEL _ _                        _    F4     F5     F6   F11
 _       @CTL_ALT @CTLALTD _ _                        _    F1     F2     F3   F12
-                          _ _ _                      _ _ _
+                        _ _ _                        _ _ _
 """
 encoders = [["_", "_"], ["AudioVolDown", "AudioVolUp"]]
 
 [[layer]]
 name = "symbols"
 keys = """
-@EXLM @AT @HASH @DLR @PERC                          @CIRC    @AMPR     _     Grave  _
-Minus Equal LeftBracket Quote Backslash             @ASTR    @LPRN     _     @RPRN   _
-@PLUS @UNDS RightBracket @RCBR @PIPE                _        nubs      _     _      _
+@EXLM @AT   @HASH        @DLR  @PERC                @CIRC    @AMPR     _     Grave  _
+Minus Equal LeftBracket  Quote Backslash            @ASTR    @LPRN     _     @RPRN  _
+@PLUS @UNDS RightBracket @RCBR @PIPE                RCtrl    nubs      _     _      _
                          _ _ _                      _ _ _
 """
-encoders = [["_","_"], ["_","_"]]
+encoders = [["WM(Left, LShift)","WM(Right, LShift)"], ["_","_"]]
 
 [[layer]]
 name = "nav"
 keys = """
-caps Home pgup Del   LSft        _     _    pgup  Home  _
+caps Home pgup Del   LShift      _     _    pgup  Home  _
 Left Down Up   Right LGui        TG(1) bspc _     _     _
-_    End  pgdn bspc  ent         _     _    pgdn  End   _
+_    End  pgdn bspc  ent         Menu  _    pgdn  End   _
                      _ _ _       _ _ _
 """
 encoders = [["_","_"], ["_","_"]]
