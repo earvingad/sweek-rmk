@@ -177,8 +177,8 @@ row_pins = ["PIN_29", "PIN_28", "PIN_27", "PIN_26"]
 col_pins = ["PIN_3", "PIN_4", "PIN_5", "PIN_6", "PIN_7"]
 
 [[split.central.input_device.encoder]]
-pin_a = "PIN_10"
-pin_b = "PIN_9"
+pin_a = "PIN_9"
+pin_b = "PIN_10"
 internal_pullup = true
 phase = "resolution"
 resolution = 4
