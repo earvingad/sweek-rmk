@@ -195,8 +195,8 @@ row_pins = ["PIN_3", "PIN_4", "PIN_5", "PIN_6"]
 col_pins = ["PIN_15", "PIN_26", "PIN_27", "PIN_28", "PIN_29"]
 
 [[split.peripheral.input_device.encoder]]
-pin_a = "PIN_9"
-pin_b = "PIN_10"
+pin_a = "PIN_10"
+pin_b = "PIN_9"
 internal_pullup = true
 phase = "resolution"
 resolution = 4
