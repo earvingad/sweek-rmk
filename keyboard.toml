@@ -81,7 +81,7 @@ A     @R_L1  @S_L2  @T_L3  D           H      @N_L6  @E_L4  I        U
 Z     X      C      V      B           K      M      Comma  @DOT_APP slsh
         LCtrl  @SPC_ALT  @ESC_L5       @ENT_L5  @BSPC_ALT   OSM(LShift)
 """
-encoders = [["Down", "Up"], ["Left", "Right"]]
+encoders = [["Up", "Down"], ["Left", "Right"]]
 
 [[layer]]
 name = "mouse"
@@ -91,7 +91,7 @@ _ _ MouseBtn1  _  MouseBtn2        _  ms_left    ms_down  ms_up     ms_right
 _ _ _          _  _                _  MouseBtn3  ms_whld  _         _
                _ _ _               _ _ _   
 """
-encoders = [["Left","Right"], ["WM(Tab, LShift)","Tab"]]
+encoders = [["Right","Left"], ["WM(Tab, LShift)","Tab"]]
 
 [[layer]]
 name = "number"
@@ -121,7 +121,7 @@ Minus Equal LeftBracket  Quote Backslash            @ASTR    @LPRN     _     @RP
 @PLUS @UNDS RightBracket @RCBR @PIPE                _        nubs      _     _      _
                          _ _ _                      RCtrl _ _
 """
-encoders = [["WM(Left, LShift)","WM(Right, LShift)"], ["_","_"]]
+encoders = [["WM(Right, LShift)","WM(Left, LShift)"], ["_","_"]]
 
 [[layer]]
 name = "nav"
@@ -160,8 +160,6 @@ combos = [
 [behavior.morse.profiles]
 # This profile is recommended when the hold action activates a layer or acts as a modifier (without HRM) (for example thumb keys)
 FH = { hold_on_other_press = true, unilateral_tap = false, hold_timeout = "200ms", gap_timeout = "200ms" }
-
-
 
 [split]
 connection = "serial"
