@@ -11,6 +11,10 @@ chip = "rp2040"
 # Mouse key interval (ms) - controls mouse movement speed
 mouse_key_interval = 5
 
+[storage]
+# Clear all storage data on boot, including keymap, BLE bonds, etc
+clear_storage = true
+
 [host]
 # Enable or disable Vial support (default: true)
 vial_enabled = true
@@ -61,13 +65,13 @@ LSFTDEL = "WM(Del, LShift)"
 NXT_WIN = "WM(Tab, LAlt)"
 PRV_WIN = "WM(Tab, LAlt | LShift)"
 
-R_L1 = "LT(1, R, FH)"
-S_L2 = "LT(2, S, FH)"
-T_L3 = "LT(3, T, FH)"
-E_L4 = "LT(4, E, FH)"
+R_L1 = "LT(1, R, HRM)"
+S_L2 = "LT(2, S, HRM)"
+T_L3 = "LT(3, T, HRM)"
+E_L4 = "LT(4, E, HRM)"
 ENT_L5 = "LT(5, ent, FH)"
 ESC_L5 = "LT(5, esc, FH)"
-N_L6 = "LT(6, N, FH)"
+N_L6 = "LT(6, N, HRM)"
 
 DOT_APP = "TH(Dot, Menu, FH)"
 BSPC_ALT = "MT(bspc, RAlt, FH)"
@@ -81,7 +85,7 @@ A     @R_L1  @S_L2  @T_L3  D           H      @N_L6  @E_L4  I        U
 Z     X      C      V      B           K      M      Comma  @DOT_APP slsh
         LCtrl  @SPC_ALT  @ESC_L5       @ENT_L5  @BSPC_ALT   OSM(LShift)
 """
-encoders = [["Up", "Down"], ["Left", "Right"]]
+encoders = [["Up", "Down"], ["Right", "Left"]]
 
 [[layer]]
 name = "mouse"
@@ -91,7 +95,7 @@ _ _ MouseBtn1  _  MouseBtn2        _  ms_left    ms_down  ms_up     ms_right
 _ _ _          _  _                _  MouseBtn3  ms_whld  _         _
                _ _ _               _ _ _   
 """
-encoders = [["Right","Left"], ["WM(Tab, LShift)","Tab"]]
+encoders = [["Right","Left"], ["Tab","WM(Tab, LShift)"]]
 
 [[layer]]
 name = "number"
@@ -111,7 +115,7 @@ _       @PRV_WIN @NXT_WIN _ _                        _    F7     F8     F9   F10
 _       @CTL_ALT @CTLALTD _ _                        _    F1     F2     F3   F12
                         _ _ _                        _ _ _
 """
-encoders = [["_", "_"], ["AudioVolDown", "AudioVolUp"]]
+encoders = [["_", "_"], ["AudioVolUp", "AudioVolDown"]]
 
 [[layer]]
 name = "symbols"
@@ -148,7 +152,7 @@ encoders = [["_","_"], ["_","_"]]
 # tap_hold = { enable_hrm = true }
 
 [behavior.combo]
-timeout = "150ms"
+timeout = "50ms"
 combos = [
   # Press J and K keys simultaneously to output Escape key
   { actions = ["W", "F"], output = "Tab" },
@@ -158,6 +162,8 @@ combos = [
 ]
 
 [behavior.morse.profiles]
+# This profile is recommended on the home row, when enable_flow_tap = true, and the hold action activates a layer or acts as a modifier (aka home row mod)
+HRM = { unilateral_tap = true, permissive_hold = true, hold_timeout = "250ms", gap_timeout = "250ms" }
 # This profile is recommended when the hold action activates a layer or acts as a modifier (without HRM) (for example thumb keys)
 FH = { hold_on_other_press = true, unilateral_tap = false, hold_timeout = "200ms", gap_timeout = "200ms" }
 
@@ -175,8 +181,8 @@ row_pins = ["PIN_29", "PIN_28", "PIN_27", "PIN_26"]
 col_pins = ["PIN_3", "PIN_4", "PIN_5", "PIN_6", "PIN_7"]
 
 [[split.central.input_device.encoder]]
-pin_a = "PIN_9"
-pin_b = "PIN_10"
+pin_a = "PIN_10"
+pin_b = "PIN_9"
 internal_pullup = true
 phase = "resolution"
 resolution = 4
