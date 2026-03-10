@@ -13,7 +13,7 @@ mouse_key_interval = 5
 
 [storage]
 # Clear all storage data on boot, including keymap, BLE bonds, etc
-clear_storage = true
+# clear_storage = true
 
 [host]
 # Enable or disable Vial support (default: true)
@@ -105,7 +105,7 @@ _ Left  _  Right _                 KpMinus  Kc4  Kc5  Kc6  KpDot
 _ Down  _  Comma _                 Kc0      Kc1  Kc2  Kc3  KpSlash
         _ _ _                      _ _ _
 """
-encoders = [["_","_"], ["WM(ms_whld, LCtrl)","WM(ms_whlu, LCtrl)"]]
+encoders = [["_","_"], ["WM(ms_whlu, LCtrl)","WM(ms_whld, LCtrl)"]]
 
 [[layer]]
 name = "function"
@@ -131,7 +131,7 @@ encoders = [["WM(Right, LShift)","WM(Left, LShift)"], ["_","_"]]
 name = "nav"
 keys = """
 caps Home pgup Del   LShift      _     _    pgup  Home  _
-Left Down Up   Right LGui        TG(1) bspc _     _     _
+Left Down Up   Right OSM(LGui)   TG(1) bspc _     _     _
 _    End  pgdn bspc  ent         Menu  _    pgdn  End   _
                      _ _ _       _ _ _
 """
