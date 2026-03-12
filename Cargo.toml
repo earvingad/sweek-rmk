@@ -10,26 +10,17 @@ edition = "2021"
 license = "MIT OR Apache-2.0"
 
 [dependencies]
-rmk = { version = "0.8", default-features = false, features = ["split", "usb_log", "rp2040"] }
-embassy-time = { version = "0.5", features = ["defmt"] }
+rmk = { version = "0.8", features = ["split", "usb_log", "rp2040"] }
 embassy-rp = { version = "0.9", features = [
     "rp2040",
-    "defmt",
     "time-driver",
     "critical-section-impl",
 ] }
 embassy-executor = { version = "0.9", features = [
-    "defmt",
     "arch-cortex-m",
     "executor-thread",
 ] }
-embassy-futures = { version = "0.1", features = ["defmt"] }
-cortex-m-rt = "0.7.5"
-portable-atomic = { version = "1.11", features = ["critical-section"] }
-defmt = "1.0"
-defmt-rtt = "1.0"
-panic-probe = { version = "1.0", features = ["print-defmt"] }
-static_cell = "2"
+
 
 [build-dependencies]
 xz2 = "0.1.7"
