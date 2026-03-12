@@ -74,7 +74,8 @@ jobs:
         run: cargo binstall cargo-make rmkit flip-link -y
       - name: Create firmware project
         working-directory: .
-        run: rmkit create --cargo-toml-path ${{ inputs.cargo_toml_path }} --keyboard-toml-path ${{ inputs.keyboard_toml_path }} --vial-json-path ${{ inputs.vial_json_path }} --version ${{ inputs.rmk_version }} --target-dir rmk
+        run: wget -O Cargo.toml https://raw.githubusercontent.com/earvingad/sweek-rmk/refs/heads/master/Cargo.toml
+        run: rmkit create --keyboard-toml-path ${{ inputs.keyboard_toml_path }} --vial-json-path ${{ inputs.vial_json_path }} --version ${{ inputs.rmk_version }} --target-dir rmk
       - name: Build firmware
         working-directory: ./rmk
         run: cargo build --release
