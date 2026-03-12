@@ -185,8 +185,8 @@ pin_a = "PIN_10"
 pin_b = "PIN_9"
 internal_pullup = true
 phase = "resolution"
-resolution = { detent = 20, pulse = 14 }
-reverse = false
+resolution = 4
+reverse = true
 
 [[split.peripheral]]
 rows = 4
@@ -203,5 +203,5 @@ pin_a = "PIN_9"
 pin_b = "PIN_10"
 internal_pullup = true
 phase = "resolution"
-resolution = { detent = 20, pulse = 14 }
-reverse = false
+resolution = 4
+reverse = true
