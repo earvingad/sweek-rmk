@@ -11,8 +11,21 @@ license = "MIT OR Apache-2.0"
 
 [dependencies]
 rmk = { version = "0.8", default-features = false, features = ["storage", "vial", "vial_lock", "host", "col2row", "split", "usb_log", "log", "rp2040"] }
+embassy-time = "0.5"
+embassy-rp = { version = "0.8", features = [
+    "rp2040",
+    "time-driver",
+    "critical-section-impl",
+] }
+embassy-executor = { version = "0.9", features = [
+    "arch-cortex-m",
+    "executor-thread",
+] }
+embassy-futures = "0.1"
+cortex-m-rt = "0.7.5"
+portable-atomic = { version = "1.11", features = ["critical-section"] }
 panic-halt = "1.0"
-
+static_cell = "2"
 
 [build-dependencies]
 xz2 = "0.1.7"
