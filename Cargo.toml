@@ -10,7 +10,7 @@ edition = "2024"
 license = "MIT OR Apache-2.0"
 
 [dependencies]
-rmk = { version = "0.8", default-features = false, features = ["storage", "vial", "vial_lock", "host", "col2row", "split", "usb_log", "log", "rp2040"] 
+rmk = { version = "0.8", default-features = false, features = ["storage", "vial", "vial_lock", "host", "col2row", "split", "usb_log", "log", "rp2040"] }
 panic-halt = "1.0"
 
 
