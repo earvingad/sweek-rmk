@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    uses: earvingad/sweek-rmk/.github/workflows/user_build.yml@main
+    uses: earvingad/sweek-rmk/.github/workflows/user_build.yml@master
     with:
       cargo_toml_path: "Cargo.toml"
       keyboard_toml_path: "keyboard.toml"
