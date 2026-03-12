@@ -1,29 +1,41 @@
 [package]
-name = "sweek-rmk"
-version = "0.1.0"
+name = "rmk-rp2040"
+version = "0.2.0"
 authors = ["Haobo Gu <haobogu@outlook.com>"]
 description = "Keyboard firmware written in Rust"
 homepage = "https://github.com/haobogu/rmk"
 repository = "https://github.com/haobogu/rmk"
-readme = "README.md"
-edition = "2021"
+readme = "../../README.md"
+edition = "2024"
 license = "MIT OR Apache-2.0"
 
 [dependencies]
-rmk = { version = "0.8", features = ["split", "usb_log", "rp2040"] }
-embassy-embedded-hal = "0.5.0"
-embassy-rp = { version = "0.8", features = [
+rmk = { path = "../../../rmk", default-features = false, features = ["split", "usb_log", "rp2040"] }
+embassy-time = { version = "0.5", features = ["defmt"] }
+embassy-rp = { version = "0.9", features = [
     "rp2040",
+    "defmt",
     "time-driver",
     "critical-section-impl",
 ] }
 embassy-executor = { version = "0.9", features = [
+    "defmt",
     "arch-cortex-m",
     "executor-thread",
 ] }
+embassy-futures = { version = "0.1", features = ["defmt"] }
 cortex-m-rt = "0.7.5"
 portable-atomic = { version = "1.11", features = ["critical-section"] }
+defmt = "1.0"
+defmt-rtt = "1.0"
+panic-probe = { version = "1.0", features = ["print-defmt"] }
 static_cell = "2"
+
+
+# [features]
+# avoid having to use --allow-multiple-definition linker flag
+# on macOS with Apple Silicon at least
+# default = ["rp-pico/disable-intrinsics"]
 
 [build-dependencies]
 xz2 = "0.1.7"
