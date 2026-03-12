@@ -7,7 +7,8 @@ on:
 
 jobs:
   build:
-    uses: haobogu/rmk/.github/workflows/user_build.yml@main
+    uses: earvingad/sweek-rmk/.github/workflows/user_build.yml@main
     with:
+      cargo_toml_path: "Cargo.toml"
       keyboard_toml_path: "keyboard.toml"
       vial_json_path: "vial.json"
