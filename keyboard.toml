@@ -73,7 +73,7 @@ ENT_L5 = "LT(5, ent, FH)"
 ESC_L5 = "LT(5, esc, FH)"
 N_L6 = "LT(6, N, HRM)"
 
-DOT_APP = "TH(Dot, Menu, FH)"
+DOT_APP = "TH(Dot, App, FH)"
 BSPC_ALT = "MT(bspc, RAlt, FH)"
 SPC_ALT = "MT(spc, LAlt, FH)"
 
@@ -132,7 +132,7 @@ name = "nav"
 keys = """
 caps Home pgup Del   LShift      _     _    pgup  Home  _
 Left Down Up   Right OSM(LGui)   TG(1) bspc _     _     _
-_    End  pgdn bspc  ent         Menu  _    pgdn  End   _
+_    End  pgdn bspc  ent         _  _    pgdn  End   _
                      _ _ _       _ _ _
 """
 encoders = [["_","_"], ["_","_"]]
